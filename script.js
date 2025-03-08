@@ -1,21 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize animations
     initAnimations();
-    // Initialize scroll events
     initScrollEvents();
-    // Initialize theme switching
     initThemeSwitching();
-    // Initialize quantity selector
     initQuantitySelector();
-    // Initialize category navigation
     initCategoryNav();
-    // Initialize size selection
     initSizeSelection();
-    // Initialize cart functionality
     initCart();
-    // Initialize parallax effect
     initParallax();
-    // Initialize menu item animations
     initMenuItemAnimations();
 });
 
@@ -24,8 +15,9 @@ function initAnimations() {
     elements.forEach(element => {
         element.classList.add('fade-in');
     });
-    document.querySelectorAll('.hero-text').forEach(el => el.classList.add('slide-in-left'));
-    document.querySelectorAll('.hero-image, .featured-image, .about-image, .delivery-image').forEach(el => el.classList.add('slide-in-right'));
+    // تم إزالة السطر الذي يضيف slide-in-left إلى .hero-text
+    document.querySelectorAll('.hero-image, .featured-image, .about-image, .delivery-image')
+        .forEach(el => el.classList.add('slide-in-right'));
     const processItems = document.querySelectorAll('.process-item');
     processItems.forEach((item, index) => {
         item.classList.add('fade-in');
@@ -41,7 +33,7 @@ function initAnimations() {
         rootMargin: '0px',
         threshold: 0.1
     };
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('appear');
@@ -114,9 +106,11 @@ function initScrollEvents() {
             const sectionTop = section.offsetTop - 100;
             const sectionId = section.getAttribute('id');
             if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                document.querySelector(`nav ul li a[href*='${sectionId}']`)?.parentElement.classList.add('active');
+                document.querySelector(`nav ul li a[href*='${sectionId}']`)
+                  ?.parentElement.classList.add('active');
             } else {
-                document.querySelector(`nav ul li a[href*='${sectionId}']`)?.parentElement.classList.remove('active');
+                document.querySelector(`nav ul li a[href*='${sectionId}']`)
+                  ?.parentElement.classList.remove('active');
             }
         });
     }
@@ -180,7 +174,8 @@ function initQuantitySelector() {
     function updatePrice() {
         const priceElement = document.querySelector('.featured-details .price');
         if (!priceElement) return;
-        const basePrice = parseFloat(priceElement.getAttribute('data-base-price') || priceElement.textContent.replace('$', ''));
+        const basePrice = parseFloat(priceElement.getAttribute('data-base-price') 
+          || priceElement.textContent.replace('$', ''));
         priceElement.textContent = `$${(basePrice * quantity).toFixed(2)}`;
     }
     const priceElement = document.querySelector('.featured-details .price');
@@ -253,9 +248,11 @@ function initSizeSelection() {
             const sizePrice = parseFloat(this.getAttribute('data-price') || 0);
             const priceElement = document.querySelector('.featured-details .price');
             if (priceElement) {
-                const basePrice = parseFloat(priceElement.getAttribute('data-original-price') || priceElement.getAttribute('data-base-price'));
+                const basePrice = parseFloat(priceElement.getAttribute('data-original-price') 
+                  || priceElement.getAttribute('data-base-price'));
                 priceElement.setAttribute('data-base-price', (basePrice + sizePrice).toFixed(2));
-                priceElement.textContent = `$${((basePrice + sizePrice) * parseInt(document.querySelector('.quantity')?.textContent || 1)).toFixed(2)}`;
+                const quantity = parseInt(document.querySelector('.quantity')?.textContent || 1);
+                priceElement.textContent = `$${((basePrice + sizePrice) * quantity).toFixed(2)}`;
             }
             this.classList.add('pulse');
             setTimeout(() => {
@@ -348,21 +345,21 @@ function initParallax() {
     window.addEventListener("scroll", function() {
         const parallaxElements = document.querySelectorAll(".floating");
         parallaxElements.forEach(element => {
-          const scrollY = window.scrollY;
-          const speed = 0.15;
-          const rect = element.getBoundingClientRect();
-          const elementTop = rect.top + scrollY;
-          const elementHeight = rect.height;
-          const viewportHeight = window.innerHeight;
-          if (scrollY + viewportHeight > elementTop && scrollY < elementTop + elementHeight) {
-            let yOffset = (scrollY - elementTop) * speed;
-            const maxOffset = 30;
-            const minOffset = -20;
-            yOffset = Math.max(minOffset, Math.min(maxOffset, yOffset));
-            element.style.transform = `translateY(${yOffset}px)`;
-          }
+            const scrollY = window.scrollY;
+            const speed = 0.15;
+            const rect = element.getBoundingClientRect();
+            const elementTop = rect.top + scrollY;
+            const elementHeight = rect.height;
+            const viewportHeight = window.innerHeight;
+            if (scrollY + viewportHeight > elementTop && scrollY < elementTop + elementHeight) {
+                let yOffset = (scrollY - elementTop) * speed;
+                const maxOffset = 30;
+                const minOffset = -20;
+                yOffset = Math.max(minOffset, Math.min(maxOffset, yOffset));
+                element.style.transform = `translateY(${yOffset}px)`;
+            }
         });
-      });
+    });
 }
 
 function initMenuItemAnimations() {
