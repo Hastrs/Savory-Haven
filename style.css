@@ -209,6 +209,7 @@ nav ul li a:focus::after {
 .hero-text {
     flex: 1;
     max-width: 600px;
+    /* إزالة أي تحريك إضافي قد يؤخر LCP */
 }
 
 .hero-text h2 {
@@ -218,10 +219,6 @@ nav ul li a:focus::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--light-color);
-}
-
-.hero-text h2 .highlight {
-    color: var(--primary-color);
 }
 
 .break-with-savory {
@@ -278,6 +275,7 @@ nav ul li a:focus::after {
         transform: translateY(0px);
     }
 }
+
 .scroll-down {
     position: absolute;
     bottom: 5%;
@@ -794,7 +792,7 @@ footer {
     vertical-align: middle;
 }
 
-.copyright {
+copyright {
     text-align: center;
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
