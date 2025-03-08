@@ -2,6 +2,9 @@
 
 Savory Haven is a modern restaurant website that offers a premium dining experience with a beautifully designed interface, engaging animations, and a seamless user experience.
 
+## 🖼️ Website Preview
+![Savory Haven Preview](./img/webimg.webp)
+
 ## 🌟 Features
 - Elegant and responsive design
 - Interactive 3D background using Three.js
@@ -12,7 +15,7 @@ Savory Haven is a modern restaurant website that offers a premium dining experie
 - Optimized for SEO and social media sharing (Meta Tags included)
 
 ## 🚀 Live Demo
-[Visit Savory Haven]([https://yourwebsite.com](https://hastrs.github.io/Savory-Haven/))
+[Visit Savory Haven](https://hastrs.github.io/Savory-Haven/)
 
 ## 🛠️ Technologies Used
 - **HTML5** - Semantic structure
