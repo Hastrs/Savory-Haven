@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Hassan El-Sayed">
+<meta name="description" content="Savory Haven - A fine dining experience with exquisite dishes crafted to perfection. Enjoy the best flavors with premium service.">
+<meta name="keywords" content="restaurant, fine dining, gourmet food, steak, seafood, desserts, drinks, modern cuisine">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="Savory Haven - Fine Dining Experience">
+<meta property="og:description" content="Indulge in the finest dishes at Savory Haven, the perfect place for gourmet lovers.">
+<meta property="og:image" content="https://yourwebsite.com/img/restaurant.webp">
+<meta property="og:url" content="https://yourwebsite.com">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+    <title>Savory Haven Restaurant</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Theme Switch -->
+    <div class="theme-switch">
+        <div class="color-option red" data-color="#8B0000" data-secondary="#F2E6D0"></div>
+        <div class="color-option brown" data-color="#5A3E36" data-secondary="#F2E6D0"></div>
+        <div class="color-option dark" data-color="#2C2C2C" data-secondary="#F2E6D0"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>SAVORY HAVEN</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#delivery">Delivery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#menu" class="cart-icon">
+                <i class='bx bx-cart-alt' ></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2 class="break-with-savory">
+                    IT'S A BREAK<br>
+                    WITH 
+                    <span class="savory-group">
+                      <span class="main-savory">SAVORY</span>
+                      <span class="repeat-savory repeat-1">SAVORY</span>
+                      <span class="repeat-savory repeat-2">SAVORY</span>
+                      <span class="repeat-savory repeat-3">SAVORY</span>
+                    </span>
+                  </h2>
+                  
+                
+        </div>
+        <div class="scroll-down">
+            <div class="circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 5V19M12 19L19 12M12 19L5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            <p>SCROLL DOWN</p>
+        </div>
+    </section>
+
+    <!-- Category Navigation -->
+    <section class="category-nav">
+        <div class="container">
+            <ul>
+                <li class="active"><a href="#all">ALL MENU</a></li>
+                <li><a href="#starters">STARTERS</a></li>
+                <li><a href="#main">MAIN COURSE</a></li>
+                <li><a href="#desserts">DESSERTS</a></li>
+                <li><a href="#drinks">DRINKS</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Featured Item Section -->
+    <section id="featured" class="featured-item">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="./img/Prime-Rib-Steak.webp" alt="Prime Rib Steak" class="floating">
+                    <div class="size-variants">
+                        <div class="size active">S</div>
+                        <div class="size">M</div>
+                        <div class="size">L</div>
+                    </div>
+                </div>
+                <div class="featured-details">
+                    <div class="ratings">
+                        <span class="stars">★★★★★</span>
+                    </div>
+                    <h2>PRIME RIB STEAK</h2>
+                    <p class="price">$32.99</p>
+                    <p class="description">Tender 12oz prime rib steak cooked to your preference, served with garlic mashed potatoes and asparagus. Our prime cuts are aged for 28 days to ensure maximum flavor and tenderness.</p>
+                    <div class="quantity-selector">
+                        <button class="quantity-btn minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                    <button class="btn add-to-cart">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="featured-menu">
+        <div class="container">
+            <h2>OUR SIGNATURE DISHES</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="label">Popular</div>
+                    <img src="./img/Grilled-Atlantic-Salmon.webp" alt="Grilled Salmon">
+                    <div class="menu-item-content">
+                        <h3>Grilled Atlantic Salmon</h3>
+                        <div class="stars">★★★★★</div>
+                        <div class="price">$24.99</div>
+                        <button class="btn add-to-cart-small">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./img/Truffle-Mushroom-Pasta.webp" alt="Truffle Mushroom Pasta">
+                    <div class="menu-item-content">
+                        <h3>Truffle Mushroom Pasta</h3>
+                        <div class="stars">★★★★☆</div>
+                        <div class="price">$19.99</div>
+                        <button class="btn add-to-cart-small">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./img/Chocolate-Lava-Cake.webp" alt="Chocolate Lava Cake">
+                    <div class="menu-item-content">
+                        <h3>Chocolate Lava Cake</h3>
+                        <div class="stars">★★★★★</div>
+                        <div class="price">$12.99</div>
+                        <button class="btn add-to-cart-small">ADD TO CART</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./img/Prime-Rib-Steak.webp" alt="Prime Rib Steak">
+                    <div class="menu-item-content">
+                        <h3>Prime Rib Steak</h3>
+                        <div class="stars">★★★★★</div>
+                        <div class="price">$32.99</div>
+                        <button class="btn add-to-cart-small">ADD TO CART</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <h2>The Best Taste From The Process</h2>
+            <div class="process-grid">
+                <div class="process-item">
+                    <div class="icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 21C4.79086 21 3 19.2091 3 17C3 15.8053 3.38293 14.6845 4.06555 13.7835C4.74818 12.8825 5.68235 12.2403 6.74648 11.9694C6.91016 10.1534 7.67195 8.4402 8.89857 7.12005C10.1252 5.7999 11.7487 4.94168 13.4998 4.68431C15.2509 4.42693 17.0322 4.78646 18.5391 5.69802C20.046 6.60958 21.1893 8.01868 21.7827 9.67294C22.3761 11.3272 22.3851 13.1349 21.8082 14.7937C21.2313 16.4526 20.102 17.8729 18.6047 18.7994" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 15C8 16.1046 7.10457 17 6 17C4.89543 17 4 16.1046 4 15C4 13.8954 4.89543 13 6 13C7.10457 13 8 13.8954 8 15Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Hand Selected</h3>
+                </div>
+                <div class="process-item">
+                    <div class="icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 7L7.5 5C7.5 3.89543 8.39543 3 9.5 3L14.5 3C15.6046 3 16.5 3.89543 16.5 5L16.5 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="3.5" y="7" width="17" height="12" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 12V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 12V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 12V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Direct Trade</h3>
+                </div>
+                <div class="process-item">
+                    <div class="icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M3 12C3 4.5885 4.5885 3 12 3C19.4115 3 21 4.5885 21 12C21 19.4115 19.4115 21 12 21C4.5885 21 3 19.4115 3 12Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Organic Taste</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Savory Haven</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Savory Haven, we believe in creating memorable dining experiences through exceptional food and service. Our culinary team is dedicated to crafting dishes that celebrate fresh, seasonal ingredients and innovative cooking techniques.</p>
+                    <p>Founded in 2020, our restaurant has quickly become a favorite destination for food enthusiasts seeking quality cuisine in a warm, inviting atmosphere. We take pride in our commitment to sustainability, supporting local farmers and producers whenever possible.</p>
+                    <p>Whether you're joining us for a romantic dinner, family celebration, or quick lunch, we look forward to welcoming you to Savory Haven.</p>
+                </div>
+                <div class="about-image">
+                    <img src="./img/restaurant.webp" alt="About Savory Haven" class="floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Section -->
+    <section id="delivery" class="delivery">
+        <div class="container">
+            <div class="delivery-content">
+                <div class="delivery-info">
+                    <h2>Fast & Reliable Delivery</h2>
+                    <p>We deliver to the following areas with estimated delivery times:</p>
+                    <ul>
+                        <li>Downtown: 15-25 minutes</li>
+                        <li>Westside: 20-30 minutes</li>
+                        <li>Northside: 25-35 minutes</li>
+                        <li>Eastside: 20-30 minutes</li>
+                        <li>Southside: 30-40 minutes</li>
+                    </ul>
+                    <p>Free delivery on orders over $25. $5 delivery fee for smaller orders.</p>
+                    <button class="btn">ORDER FOR DELIVERY</button>
+                </div>
+                <div class="delivery-image">
+                    <img src="./img/delivery-map.webp" alt="Delivery Service" class="floating">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h2>Get New Updates And Discount Offers</h2>
+                    <p>Stay updated and stay ahead! Get notified of new arrivals, discounts, and offers by signing up for updates.</p>
+                </div>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your Email...">
+                    <button class="btn">SUBSCRIBE</button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>SAVORY HAVEN</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h3>Pages</h3>
+                        <ul>
+                            <li><a href="#menu">Menu</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#delivery">Delivery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="#" ><i class='bx bxl-facebook-circle  fot-icon' ></i></a></li>
+                            <li><a href="#" ><i class='bx bxl-instagram  fot-icon' ></i></a></li>
+                            <li><a href="#" ><i class='bx bx-x  fot-icon' ></i></a></li>
+                            <li><a href="#" ><i class='bx bxl-linkedin  fot-icon' ></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Contacts</h3>
+                        <ul>
+                            <li>
+                                <i class='bx bx-envelope'></i>
+                                info@savoryhaven.com
+                            </li>
+                            <li>
+                                <i class='bx bx-phone' ></i>
+                                (555) 123-4567
+                            </li>
+                            <li>
+                                <i class='bx bx-location-plus' ></i>
+                                123 Culinary Street, Foodville
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>All copyrights are reserved by © Hassan El-Sayed                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">↑</a>
+
+    <script src="script.js"></script>
+</body>
+</html>
