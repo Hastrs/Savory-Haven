@@ -12,7 +12,7 @@ Savory Haven is a modern restaurant website that offers a premium dining experie
 - Optimized for SEO and social media sharing (Meta Tags included)
 
 ## 🚀 Live Demo
-[Visit Savory Haven](https://yourwebsite.com)
+[Visit Savory Haven]([https://yourwebsite.com](https://hastrs.github.io/Savory-Haven/))
 
 ## 🛠️ Technologies Used
 - **HTML5** - Semantic structure
@@ -29,10 +29,11 @@ Savory Haven is a modern restaurant website that offers a premium dining experie
 ├── /img (contains all images)
 ├── README.md
 ├── LICENSE
+
 ## 🛠️ How to Run Locally
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/SavoryHaven.git
+   git clone https://hastrs.github.io/Savory-Haven/.git
 2. Open index.html in a browser.
 ts
 Integrate a backend for real order processing
@@ -43,4 +44,5 @@ This project is licensed under the MIT License. See the LICENSE file for more de
 
 👨‍💻 Author
 Hassan El Sayed
+
 GitHub | Website | LinkedIn
