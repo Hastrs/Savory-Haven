@@ -1,4 +1,3 @@
-/* Base Styles */
 :root {
     --primary-color: #8B0000;
     --secondary-color: #5A3E36;
@@ -25,18 +24,19 @@ body {
     background-color: var(--light-color);
     color: var(--dark-color);
     overflow-x: hidden;
-    
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     width: 15px;
-  }
-  
-  ::-webkit-scrollbar-thumb{
+}
+
+::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
-  }
-  ::-webkit-scrollbar-track{
+}
+
+::-webkit-scrollbar-track {
     background-color: var(--dark-color);
-  }
+}
 
 .container {
     max-width: 1200px;
@@ -61,7 +61,6 @@ img {
     height: auto;
 }
 
-/* Theme Switch */
 .theme-switch {
     position: fixed;
     top: 20px;
@@ -93,19 +92,6 @@ img {
     background-color: #2C2C2C; 
 }
 
-/* Canvas Background */
-#bg-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    width: 100%;
-    height: 100%;
-    opacity: 0.04;
-    pointer-events: none;
-}
-
-/* Header */
 header {
     position: fixed;
     top: 0;
@@ -181,10 +167,8 @@ nav ul li a:focus::after {
 
 .cart-icon:hover {
     color: var(--primary-color);
-    
 }
 
-/* Hero Section */
 .hero {
     position: relative;
     background: url("./img/background.webp") center/cover no-repeat;
@@ -194,9 +178,9 @@ nav ul li a:focus::after {
     align-items: center;
     color: white;
     text-align: center;
-  }
+}
 
-  .hero::before {
+.hero::before {
     content: "";
     position: absolute;
     top: 0;
@@ -207,12 +191,11 @@ nav ul li a:focus::after {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 1;
-  }
-  
-  .hero > * {
-   
+}
+
+.hero > * {
     z-index: 1;
-  }
+}
 .hero-content {
     display: flex;
     align-items: center;
@@ -235,23 +218,17 @@ nav ul li a:focus::after {
     text-transform: uppercase;
     letter-spacing: 1px;
     color: var(--light-color);
-   
 }
 
 .hero-text h2 .highlight {
     color: var(--primary-color);
-    
 }
 
-
 .break-with-savory {
-    font-size: 2rem;      
-    line-height: 1.2;    
-    display: inline-block; 
-    
-  }
-  
-
+    font-size: 2rem;
+    line-height: 1.2;
+    display: inline-block;
+}
 
 .savory-group {
     position: relative;
@@ -286,8 +263,6 @@ nav ul li a:focus::after {
     opacity: 0.2;
 }
 
-
-  
 .floating {
     animation: float 4s ease-in-out infinite;
 }
@@ -318,7 +293,6 @@ nav ul li a:focus::after {
 
 .scroll-down:hover {
     transform: translateY(10px);
-    
 }
 
 .scroll-down .circle {
@@ -352,7 +326,6 @@ nav ul li a:focus::after {
     font-weight: 500;
 }
 
-/* Category Navigation */
 .category-nav {
     padding: 20px 0;
     position: relative;
@@ -387,7 +360,6 @@ nav ul li a:focus::after {
     background-color: var(--primary-color);
 }
 
-/* Featured Item */
 .featured-item {
     padding: 80px 0;
     background-color: rgba(242, 230, 208, 0.2);
@@ -517,7 +489,6 @@ nav ul li a:focus::after {
     transform: translateY(-3px);
 }
 
-/* Menu Section */
 .featured-menu {
     padding: 80px 0;
 }
@@ -585,7 +556,6 @@ nav ul li a:focus::after {
     font-weight: 600;
 }
 
-/* Process Section */
 .process-section {
     padding: 80px 0;
     background-color: rgba(242, 230, 208, 0.2);
@@ -632,7 +602,6 @@ nav ul li a:focus::after {
     font-size: 1.2rem;
 }
 
-/* About Section */
 .about {
     padding: 80px 0;
 }
@@ -666,7 +635,6 @@ nav ul li a:focus::after {
     min-width: 300px;
 }
 
-/* Delivery Section */
 .delivery {
     padding: 80px 0;
     background-color: rgba(242, 230, 208, 0.2);
@@ -704,13 +672,11 @@ nav ul li a:focus::after {
 }
 
 .delivery-image {
-    
     flex: 1;
     max-width: 500px;
     min-width: 300px;
 }
 
-/* Newsletter Section */
 .newsletter {
     padding: 80px 0;
 }
@@ -755,7 +721,6 @@ nav ul li a:focus::after {
     opacity: 0.8;
 }
 
-/* Footer */
 footer {
     background-color: var(--dark-color);
     color: var(--light-color);
@@ -784,9 +749,10 @@ footer {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.fot-icon{
-font-size: 20px;
+.fot-icon {
+    font-size: 20px;
 }
+
 .footer-links {
     flex: 3;
     display: flex;
@@ -836,7 +802,6 @@ font-size: 20px;
     font-size: 0.9rem;
 }
 
-/* Back to Top Button */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -866,10 +831,8 @@ font-size: 20px;
     background-color: var(--secondary-color);
 }
 
-/* Responsive Design */
-
 @media (max-width: 1440px) {
-    .theme-switch{
+    .theme-switch {
         margin-top: 2.3rem;
     }
 }
@@ -877,45 +840,37 @@ font-size: 20px;
     .hero-text h2 {
         font-size: 2.5rem;
     }
-    .theme-switch{
+    .theme-switch {
         margin-top: 3.2rem;
         margin-right: 1rem;
     }
     .featured-content {
         flex-direction: column;
     }
-    
     .featured-image, .featured-details {
         max-width: 100%;
     }
-    
 }
-
 @media (max-width: 768px) {
     header {
         padding: 15px 0;
     }
-    
     .logo h1 {
         font-size: 1.2rem;
     }
-    
     nav ul {
         gap: 15px;
     }
-    
     .hero-content {
         flex-direction: column;
         text-align: center;
     }
-    .theme-switch{
+    .theme-switch {
         margin-top: 2.3rem;
     }
-    
     .repeated-text {
         justify-content: center;
     }
-    
     .process-grid {
         flex-direction: column;
         align-items: center;
@@ -923,44 +878,37 @@ font-size: 20px;
     .newsletter-form {
         flex-direction: column;
     }
-    
     .newsletter-form button {
         width: 100%;
     }
-    .theme-switch{
+    .theme-switch {
         margin-top: 2.3rem;
     }
     .category-nav ul {
         gap: 20px;
     }
 }
-
 @media (max-width: 576px) {
     .category-nav ul {
         gap: 20px;
     }
-    
     .featured-item {
         padding: 60px 0;
     }
-    
     .featured-details h2 {
         font-size: 2rem;
     }
-    
     .newsletter-form {
         flex-direction: column;
     }
-    
     .newsletter-form button {
         width: 100%;
     }
-    .theme-switch{
+    .theme-switch {
         margin-top: 3.8rem;
     }
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
