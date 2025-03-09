@@ -15,7 +15,7 @@ function initAnimations() {
     elements.forEach(element => {
         element.classList.add('fade-in');
     });
-    // تم إزالة السطر الذي يضيف slide-in-left إلى .hero-text
+    
     document.querySelectorAll('.hero-image, .featured-image, .about-image, .delivery-image')
         .forEach(el => el.classList.add('slide-in-right'));
     const processItems = document.querySelectorAll('.process-item');
