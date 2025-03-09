@@ -10,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initMenuItemAnimations();
 });
 
+window.addEventListener("load", function() {
+    document.getElementById("preloader").style.display = "none";
+  });
+  
 function initAnimations() {
     const elements = document.querySelectorAll('.featured-item, .process-section, .about, .delivery, .newsletter, .featured-menu');
     elements.forEach(element => {
