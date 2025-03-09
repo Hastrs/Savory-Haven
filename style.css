@@ -209,7 +209,9 @@ nav ul li a:focus::after {
 .hero-text {
     flex: 1;
     max-width: 600px;
-    /* إزالة أي تحريك إضافي قد يؤخر LCP */
+     opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .hero-text h2 {
