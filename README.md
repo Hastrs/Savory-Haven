@@ -3,7 +3,7 @@
 Savory Haven is a modern restaurant website that offers a premium dining experience with a beautifully designed interface, engaging animations, and a seamless user experience.
 
 ## 🖼️ Website Preview
-![Savory Haven Preview](./img/webimg.webp)
+![Savory Haven Preview](./img/savory-haven.webp)
 
 ## 🌟 Features
 - Elegant and responsive design
