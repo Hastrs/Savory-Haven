@@ -174,7 +174,7 @@ nav ul li a:focus::after {
     width: 100%;
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
-                url('./img/background2.webp') center/cover no-repeat;
+                url('img/background2.webp') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
